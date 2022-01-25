@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require('cors');
 const morgan = require("morgan");
 const helmet = require("helmet");
 const db = require("./config/db");
@@ -17,9 +18,9 @@ const swaggerOptions = {
     //servers: ["http://localhost:5000/"],
     openapi: "3.0.3",
     info: {
-      title: "API Resto 2",
-      version: "2.1.0",
-      description: "Sprint Project N. 2",
+      title: "API Auth Basic",
+      version: "1.1.0",
+      description: "Sprint 4",
     },
     components: {
       securitySchemes: {
@@ -75,6 +76,8 @@ const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
 // Inicializacion del server
 const app = express();
+
+app.use(cors());
 
 const { Router } = require("express");
 const router = Router();
