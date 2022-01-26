@@ -39,13 +39,13 @@ function handlerValidarRegister(e) {
         },
     })
         .then(r => r.json().then(data => ({ status: r.status, body: data })))
-        .then(obj => {
-            console.log(obj);
-            if (obj.status === 200 || obj.status === 201) {
+        .then(info => {
+            console.log(info);
+            if (info.status === 200 || info.status === 201) {
                 window.location.href = "registerOK.html";
             } else {
                 const messaggeError = document.getElementById("messageError");
-                messaggeError.innerText = obj.body.status;
+                messaggeError.innerText = info.body.status;
             }
         });
 };
