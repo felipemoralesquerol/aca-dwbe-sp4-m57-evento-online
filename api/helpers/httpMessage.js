@@ -25,6 +25,7 @@ module.exports = {
     // TODO: Enviar emails
     // TODO: Volcar esta información en un archivo de log
     // TODO: Internacionalizar (i18n)
+
     console.error(err);
     res
       .status(403)
