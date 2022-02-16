@@ -3,7 +3,7 @@ const authConfig = require("../config/auth");
 const httpMessage = require("../helpers/httpMessage");
 
 module.exports = {
-  // Encriptamos la contraseña
+  // Encriptamos la contraseña por razones de seguridad
   encrypt(password) {
     return bcrypt.hashSync(password, Number.parseInt(authConfig.rounds));
   },
