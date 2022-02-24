@@ -19,7 +19,7 @@ const swaggerOptions = {
     openapi: "3.0.3",
     info: {
       title: "API Auth Basic",
-      version: "1.1.0",
+      version: "1.2.0",
       description: "Sprint 4",
     },
     components: {
